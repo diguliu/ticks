@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Ticks to Timestamp Converter",
+  "version": "1.0",
+  "description": "Convert ticks time format to timestamp on text selection",
+  "permissions": [
+    "contextMenus",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+} 
